@@ -51,7 +51,7 @@ namespace Markdig.Renderers.Html
                             .Write(">");
                 }
 
-                renderer.WriteLeafRawLines(obj, true, true, true);
+                renderer.WriteLeafRawLines(obj, true, false, false);
 
                 if (renderer.EnableHtmlForBlock)
                 {
@@ -80,7 +80,7 @@ namespace Markdig.Renderers.Html
                     renderer.Write(">");
                 }
 
-                renderer.WriteLeafRawLines(obj, true, true);
+                renderer.WriteLeafRawLines(obj, true, false);
 
                 if (renderer.EnableHtmlForBlock)
                 {

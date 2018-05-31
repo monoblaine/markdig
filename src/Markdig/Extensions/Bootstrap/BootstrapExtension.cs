@@ -34,7 +34,11 @@ namespace Markdig.Extensions.Bootstrap
                 {
                     if (node is Tables.Table)
                     {
-                        node.GetAttributes().AddClass("table");
+                        var nodeAttributes = node.GetAttributes();
+
+                        nodeAttributes.AddClass("table");
+                        nodeAttributes.AddClass("table-bordered");
+                        nodeAttributes.AddClass("table-striped");
                     }
                     else if (node is QuoteBlock)
                     {
